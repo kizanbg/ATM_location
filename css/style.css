@@ -10,11 +10,40 @@ body {
     outline: none;
 }
 
-.map-wrapper {
+.welcome-content {
     display: block;
     height: 100vh;
     position: relative;
     width: 100vw;
+}
+
+.container.active .welcome-content {
+    display: none;
+}
+
+.welcome-content p.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.map-wrapper {
+    display: none;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+
+.container.active .map-wrapper{
+    display: block;
 }
 
 #atm-map {

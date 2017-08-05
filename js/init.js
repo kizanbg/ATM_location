@@ -5,5 +5,8 @@
         window.atm.utility = {};
         window.atm.menu = {};
     }
+    window.addEventListener("load", function () {
+        window.atm.utility.geoLocation();
+    })
 })();
 
