@@ -31,14 +31,15 @@
         }
     }
     function showPosition(position) {
-        var utility = window.atm.utility,
+        var locationEvent = new Event('location-loaded'),
+            utility = window.atm.utility,
             container = document.querySelector('.container');
 
         window.atm.position = position;
         utility.addClass(container,'active');
+        window.dispatchEvent(locationEvent);
     }
     function geoLocation(){
-        console.log('test');
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         }

@@ -46,10 +46,10 @@ body {
     display: block;
 }
 
-#atm-map {
-    background-image: url('https://www.wired.com/wp-content/uploads/2016/11/GoogleMap-1.jpg');
+#map {
+    /*background-image: url('https://www.wired.com/wp-content/uploads/2016/11/GoogleMap-1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
     height: 100%;
     width: 100%;
 }
