@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.map-wrapper {
+    display: block;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+
+#atm-map {
+    background-image: url('https://www.wired.com/wp-content/uploads/2016/11/GoogleMap-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.map-wrapper .list-wrapper {
+    background: #ffffff;
+    -webkit-box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.35);
+    max-height: calc(100% - 40px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 300px;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 2;
+}
+
+.map-wrapper .list-wrapper.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.map-wrapper .list-wrapper #multi-currency-form{
+    display: inline-block;
+    width: calc(100% - 30px);
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.map-wrapper .list-wrapper #multi-currency-form input{
+    line-height: 30px;
+    height: 20px;
+    margin: 5px 0;
+    vertical-align: middle;
+}
+
+.map-wrapper .list-wrapper button.colapse-wrapper{
+    border: none;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    float: right;
+    width: 30px;
+    display: inline-block;
+}
+
+.map-wrapper .list-wrapper .item{
+    border: 1px solid #ddd;
+    display: block;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-wrapper .list-wrapper .item .title{
+    font-weight: 600;
+    text-transform: uppercase;
+}
