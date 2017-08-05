@@ -29,12 +29,27 @@
         } else {
             addClass(el, className);
         }
-    };
+    }
+    function showPosition(position) {
+        var utility = window.atm.utility,
+            container = document.querySelector('.container');
+
+        window.atm.position = position;
+        utility.addClass(container,'active');
+    }
+    function geoLocation(){
+        console.log('test');
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+    }
 
     window.atm.utility.addClass = addClass;
     window.atm.utility.removeClass = removeClass;
     window.atm.utility.hasClass = hasClass;
     window.atm.utility.toggleClass = toggleClass;
+    window.atm.utility.geoLocation = geoLocation;
+    window.atm.utility.showPosition = showPosition;
 })();
 
 
