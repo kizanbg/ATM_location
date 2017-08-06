@@ -140,9 +140,18 @@ body {
 .map-wrapper .list-wrapper .item{
     border: 1px solid #ddd;
     display: block;
-    height: 60px;
     padding: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.map-wrapper .list-wrapper .item:hover{
+    background: #eeeeee;
 }
 
 .map-wrapper .list-wrapper .item .title{
@@ -184,4 +193,10 @@ body {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .map-wrapper .list-wrapper {
+        width: calc(100% - 60px);
+    }
 }

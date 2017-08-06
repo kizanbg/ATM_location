@@ -44,6 +44,12 @@
             navigator.geolocation.getCurrentPosition(showPosition);
         }
     }
+    function setWindowHeight(){
+        var windowHeight = window.innerHeight;
+        if (windowHeight < 605) {
+            window.location = "http://google.com";
+        }
+    }
 
     window.atm.utility.addClass = addClass;
     window.atm.utility.removeClass = removeClass;
