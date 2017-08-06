@@ -150,7 +150,17 @@ body {
     text-transform: uppercase;
 }
 
-.loader {
+.map-wrapper .list-wrapper .filter-wraper,
+.map-wrapper .list-wrapper .items-wrapper{
+    display: none;
+}
+
+.map-wrapper .list-wrapper.list-loaded .filter-wraper,
+.map-wrapper .list-wrapper.list-loaded .items-wrapper{
+    display: block;
+}
+
+.map-wrapper .list-wrapper .loader {
     border: 10px solid #f3f3f3;
     border-radius: 50%;
     border-top: 10px solid #3498db;
@@ -159,6 +169,11 @@ body {
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
     margin: 20px auto;
+    display: block;
+}
+
+.map-wrapper .list-wrapper.list-loaded .loader {
+    display: none;
 }
 
 @-webkit-keyframes spin {
