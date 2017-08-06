@@ -16,8 +16,10 @@
             i,
             items = '';
 
+        window.atm.atms = atms;
+
         for(i = 0; i < 10; i += 1) {
-            items += '<div class="item">';
+            items += '<div class="item" onclick="window.atm.map.showItem('+i+')">';
             items += '<div class="title">'+atms[i].name+'</div>';
             items += '<div class="description">Distance: 110km</div>';
             items += '</div>';
