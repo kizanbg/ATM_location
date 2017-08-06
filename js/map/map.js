@@ -3,6 +3,10 @@
 (function(){
     "use strict";
 
+    function showItem(index) {
+        console.log(index);
+    }
+
     function initMap() {
         var uluru = {lat: window.atm.position.coords.latitude, lng: window.atm.position.coords.longitude},
             map = new google.maps.Map(document.getElementById('map'), {
@@ -16,5 +20,6 @@
     }
 
     window.addEventListener("location-loaded", initMap);
+    window.atm.map.showItem = showItem;
 
 })();
